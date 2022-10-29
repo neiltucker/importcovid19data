@@ -1,4 +1,4 @@
-# Updates pushed from GitHub repo
+# Updates pushed from GitHub repository
 import json, csv, boto3, urllib
 from datetime import datetime
 
