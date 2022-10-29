@@ -10,7 +10,7 @@ table = dynamodb.Table('importcovid19data')
 def lambda_handler(event, context):
    # Save file to S3 as a backup
    dt = datetime.now().strftime("%Y%m%d%H%M%S")
-   uploaddate = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+   uploaddate = datetime.now().strftime("%Y-%m-%d %H:%M:%S") + "UTC"
    filename = dt + "_covid19data.json"
    lambda_path = "/tmp/" + filename
    s3_path = "data/" + filename
